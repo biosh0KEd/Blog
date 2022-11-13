@@ -62,4 +62,17 @@ Azure asigna los recursos de una red virtual a una dirección IP privada desde e
 - 192.168.1.2, 192.168.1.3 : reservada por Azure para asignar las direcciones IP de Azure DNS al espacio de red virtual.
 - 192.168.1.255: dirección de difusión de red.
 
+
+## Subredes
+
+Una subred es un intervalo de direcciones IP de la red virtual.
+ 
+La subred IPv4 más pequeña admitida es /29 y la más grande es /2 (con definiciones de subred CIDR). Las subredes IPv6 deben tener un tamaño exactamente de /64.
+
+Al planear la implementación de subredes, debe tener en cuenta lo siguiente:
+- Cada subred debe tener un intervalo de direcciones único, que se especifica en el formato de Enrutamiento de interdominios sin clases (CIDR).
+- Algunos servicios de Azure requieren su propia subred.
+- Las subredes se pueden usar para la administración del tráfico. Por ejemplo, puede crear subredes para enrutar el tráfico a través de una aplicación virtual de red.
+- Puede limitar el acceso de subredes específicas a los recursos de Azure con un punto de conexión de servicio de red virtual. Puede crear varias subredes y habilitar un punto de conexión de servicio para algunas de ellas, pero no para otras.
+
 # App service integración con VNet
